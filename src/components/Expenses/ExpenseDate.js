@@ -1,18 +1,4 @@
 import "./ExpenseDate.css";
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
 
 function ExpenseDate(props) {
   const month = props.date.toLocaleString("en-US", { month: "long" });
