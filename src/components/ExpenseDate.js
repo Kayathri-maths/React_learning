@@ -15,14 +15,14 @@ const months = [
 ];
 
 function ExpenseDate(props) {
-  const month = months[props.date.getMonth()];
+  const month = props.date.toLocaleString("en-US", { month: "long" });
   const year = props.date.getFullYear();
-  const date = props.date.getDate();
+  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
   return (
     <div className="expense-date">
       <div className="expense-date__month">{month}</div>
       <div className="expense-date__year">{year}</div>
-      <div className="expense-date__day">{date}</div>
+      <div className="expense-date__day">{day}</div>
     </div>
   );
 }
